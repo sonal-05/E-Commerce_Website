@@ -1,0 +1,75 @@
+<?php include 'common.php'; 
+if (!isset($_SESSION['email'])) {
+header('location: index.php');
+}
+?>
+<!Doctype html>
+<head>
+
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<!--Jquery library-->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.css"></script>
+
+<!--Latest Compiled and minified Javascript-->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+ 
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Lifestyle Store</title>
+
+<!--CSS FILES-->
+<link rel="stylesheet" href="css/index.css" type="text/css"/>
+</head>
+<body>
+<div class="header">
+	<nav class="navbar navbar-inverse navbar-fixed-top">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle" data-target="myNavbar">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<a href="index.html" class="navbar-brand">Lifestyle Store</a>
+			</div>
+			<div class="collapse navbar-collapse" id="myNavbar">
+				<ul class="nav navbar-nav navbar-right">
+				  <li><a href="cart.html"><span class="glyphicon glyphicon-shopping-cart"></span>&nbsp;Cart
+					</a></li>
+				  <li><a href="setting.html"><span class="glyphicon glyphicon-user"></span>&nbsp;Setting	
+					</a></li>
+				  <li><a href="logout.html"><span class="glyphicon glyphicon-log-in"></span>&nbsp;Logout
+					</a></li>			
+				</ul>
+			</div>
+		</div>
+	</nav>
+</div>
+
+<div class="container-fluid" style="margin-top:10%">
+	<div class="row">
+		<div class="col-lg-4 col-lg-offset-4 col-md-6 col-md-offset-3">
+			<h2>Change Password</h2>
+			<form method="POST" action="setting_script.php">
+			<div class="form-group">
+				<input type="password" class="form-control" name="old password" placeholder="Old Password" required="true"> 
+			</div>
+			<div class="form-group">
+				<input type="password" class="form-control" name="new password" placeholder="New Password" required="true"> 
+			</div>
+			<div class="form-group">
+				<input type="password" class="form-control" name="Re password" placeholder="Re-Type Password" required="true"> 
+			</div>
+			<button type="submit" name="submit" class="btn btn-primary">Change</button>
+		</div>
+	</div>
+</div>
+<footer>
+	<div class="container">
+		<center>Copyright © Lifestyle Store. All Rights Reserved | Contact Us: +91 90000 00000</center>
+	</div>
+</footer>
+</body>
+</html>
+
